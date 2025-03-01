@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>AccidentSim</title>
+
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title"> AccidentSim: Generating Physically <br> Realistic Vehicle Collision Videos from Real-World Accident Reports</h1>
+          <div class="is-size-4 publication-authors">
+            <!-- Paper authors -->
+            <span class="author-block">
+              <a href="https://lilin718211.github.io/" target="_blank">Xiangwen Zhang<sup>1</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="https://lilin718211.github.io/" target="_blank">Qian Zhang<sup>1</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="https://lilin718211.github.io/" target="_blank">Longfei Han<sup>1</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="https://lilin718211.github.io/" target="_blank">Qiang Qu<sup>2</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="https://lilin718211.github.io/" target="_blank">Xiaoming Chen<sup>1,2</sup></a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Beijing Technology and Business University, <sup>2</sup>University of Sydney</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Arxiv PDF link -->
+              <span class="link-block">
+                <a href="https://lilin718211.github.io/" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- Github link -->
+              <span class="link-block">
+                <a href="https://lilin718211.github.io/" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            <font size="4">Collecting real-world vehicle accident videos for autonomous driving research is challenging due to their rarity and complexity. While existing driving video generation methods may produce visually realistic videos, they often fail to deliver physically realistic simulations because they lack the capability to generate accurate post-collision trajectories. In this paper, we introduce AccidentSim, a novel framework that generates physically realistic vehicle collision videos by extracting and utilizing the physical clues and contextual information available in real-world vehicle accident reports. Specifically, AccidentSim leverages a reliable physical simulator to replicate post-collision vehicle trajectories from the physical and contextual information in the accident reports and to build a vehicle collision trajectory dataset. This dataset is then used to fine-tune a language model, enabling it to respond to user prompts and predict physically consistent post-collision trajectories across various driving scenarios based on user descriptions. Finally, we employ Neural Radiance Fields (NeRF) to render high-quality backgrounds, merging them with the foreground vehicles that exhibit physically realistic trajectories to generate the vehicle collision videos. Experimental results demonstrate that the videos produced by AccidentSim excel in both visual and physical authenticity.</font>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h2 class="title">Framework</h2>
+
+      <img  src="static/images/ACC.jpg" width="100%" height="450">
+      </img>
+        
+      </div>
+    </div>
+  </section>
+<!--End paper poster -->
+
+<!-- End image carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Title for the Video Section -->
+      <h1 class="title is-3 has-text-centered">Diverse Collision Angles</h1>
+      
+      <!-- First row of videos: Three videos -->
+      <div class="columns">
+        <div class="column is-4">
+          <video poster="" id="video1" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_1/Front-left.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered"><b>Front-left</b></p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video2" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_1/Front-right.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered"><b>Front-right</b></p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video3" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_1/Head-on.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered"><b>Head-on</b></p>
+        </div>
+      </div>
+
+      <!-- Second row of videos: Tree videos centered -->
+      <div class="columns ">
+        <div class="column is-4">
+          <video poster="" id="video4" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_1/Rear-left.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered"><b>Rear-left</b></p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video5" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_1/Rear-right.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered"><b>Rear-right</b></p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video6" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_1/Rear-end.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered"><b>Rear-end</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Title for the Video Section -->
+      <h1 class="title is-3 has-text-centered">Collisions occurring on different types of roads</h1>
+      
+      <!-- First row of videos: Three videos -->
+      <div class="columns">
+        <div class="column is-4">
+          <video poster="" id="video1" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_2/Circular Road.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered"><b>Circular Road</b></p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video2" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_2/intersection.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered"><b>intersection</b></p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video3" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_2/Narrow road.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered"><b>Narrow road</b></p>
+        </div>
+      </div>
+
+      <!-- Second row of videos: Tree videos centered -->
+      <div class="columns ">
+        <div class="column is-4">
+          <video poster="" id="video4" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_2/Straight road.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered"><b>Straight road</b></p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video5" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_2/T-junction.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered"><b>T-junction</b></p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video6" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_2/Y-junction.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered"><b>Y-junction</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Title for the Video Section -->
+      <h1 class="title is-3 has-text-centered">Comparison to related works</h1>
+      
+      <!-- First row of videos: Three videos -->
+      <div class="columns is-centered">
+        <div class="column is-4">
+          <video poster="" id="video1" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_3/Original Data(waymo).mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered"><b>Original Data(waymo)</b></p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video2" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_3/ChatSim.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered"><b>ChatSim</b></p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video3" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_3/AutoVFX.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered"><b>AutoVFX</b></p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video4" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_3/AccidentSim.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered"><b>AccidentSim</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-4">
+        <div class="content">
+          <p>
+            Acknowledgements
+          </p>
+          <p>
+            The website template was borrowed from <a href="https://javyduck.github.io/chatscene/" target="_blank">ChatScene</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
